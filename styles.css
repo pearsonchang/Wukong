@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mythical-creature {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    max-height: 70vh;
+    overflow: hidden; /* 防止内容溢出 */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.info-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#codeInput {
+    width: 500px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: 'Font Name', sans-serif;
+    color: #fafad2;
+    font-size: 1em; /* 根据需要调整 */
+    margin-bottom: 10px;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/CustomFont.woff2') format('woff2'),
+         url('fonts/CustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.artistic-text {
+    font-family: 'CustomFont', sans-serif;
+    font-size: 2em; /* 根据需要调整 */
+    color: #FFD700; /* 或其他颜色 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 可选的阴影效果 */
+}
+
+#copyButton {
+    padding: 10px 20px;
+    background-color: #ffd700;
+    border: none;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+
