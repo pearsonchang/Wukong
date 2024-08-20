@@ -6,71 +6,97 @@ body, html {
     background-color: #1a1a1a;
     color: #ffffff;
     box-sizing: border-box;
+    background-image: url('./img/wukong_bg.jpeg'); /* 替换为你图片的路径 */
+    background-size: cover; /* 使图片覆盖整个背景 */
+    background-position: center; /* 将图片居中 */
+    background-repeat: no-repeat; /* 防止图片重复 */
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.mythical-creature {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%;
-    max-height: 70vh;
-    overflow: hidden; /* 防止内容溢出 */
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
-.info-panel {
+.button-container {
     position: absolute;
-    bottom: 20px;
+    left: 10px; /* 调整这个值以控制按钮距左边的距离 */
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中 */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 按钮之间的间距 */
+    margin-top: -120px; /* 负值会将按钮向上移动 */
+}
+
+.custom-button {
+    /* padding: 10px 20px; */
+    background-color: #FFD700;
+    border: none;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* 图标与文本之间的间距 */
+}
+
+.button-icon {
+    width: 40px; /* 根据需要调整图标大小 */
+    height: auto;
+}
+
+
+/* Custom Popup Styles */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
 }
 
-#codeInput {
-    width: 500px;
+.popup-content .address {
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    font-family: 'Font Name', sans-serif;
-    color: #fafad2;
-    font-size: 1em; /* 根据需要调整 */
     margin-bottom: 10px;
-}
-
-@font-face {
-    font-family: 'CustomFont';
-    src: url('fonts/CustomFont.woff2') format('woff2'),
-         url('fonts/CustomFont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.artistic-text {
-    font-family: 'CustomFont', sans-serif;
-    font-size: 2em; /* 根据需要调整 */
-    color: #FFD700; /* 或其他颜色 */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 可选的阴影效果 */
-}
-
-#copyButton {
-    padding: 10px 20px;
-    background-color: #ffd700;
-    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: -10px;
+    color: #fff;
+    user-select: none;
+}
+
+.popup-content .address:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.popup-content button {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
 }
 
 
+.storybox {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(128, 128, 128, 0.7); /* Semi-transparent grey */
+    color: #FFD700; /* Gold color */
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensures the box is on top of other elements */
+}
+
+.story-text {
+    margin: 0;
+    font-family: 'Dancing Script', cursive; /* Use one of your imported fonts */
+}
