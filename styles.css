@@ -120,7 +120,7 @@ body, html {
     .button-container {
         position: fixed;
         bottom: 10px;
-        left:10%;
+        left: 10%;
         top: 10%; /* 将图标容器向页面底部移动 */
         transform: translateX(-50%);
         flex-direction: column; /* 垂直排列图标 */
@@ -131,7 +131,6 @@ body, html {
 
     .custom-button {
         background-color: transparent; /* 使按钮背景透明 */
-        font-size: 1.5em; /* 按钮字体大小 */
         width: 60px; /* 固定按钮宽度 */
         height: 60px; /* 固定按钮高度 */
         border-radius: 10px;
@@ -152,12 +151,11 @@ body, html {
         border-radius: 10px; /* 圆角按钮 */
         cursor: pointer; /* 鼠标悬停时显示为手型 */
     }
-    
 
     .button-icon {
-        width: 100%; /* 让图标填满按钮 */
+        width: 80%; /* 增加图标宽度，以填满按钮 */
         height: auto; /* 保持图标的宽高比 */
-        max-height: 100%; /* 确保图标不会超过按钮的高度 */
+        max-height: 80%; /* 限制图标的最大高度为按钮的 80% */
         object-fit: contain; /* 确保图标在按钮内适当缩放 */
     }
 
