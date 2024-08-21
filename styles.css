@@ -120,7 +120,7 @@ body, html {
     .button-container {
         position: fixed;
         bottom: 10px; /* 确保图标容器固定在屏幕底部 */
-        left: 50%; /* 居中对齐 */
+        /* left: 50%; 居中对齐 */
         transform: translateX(-50%); /* 水平居中对齐 */
         flex-direction: column; /* 水平排列图标 */
         justify-content: center; /* 居中对齐图标 */
