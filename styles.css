@@ -25,11 +25,10 @@ body, html {
 
 .custom-button {
     /* padding: 10px 20px; */
-    background-color: #FFD700;
+    background-color: black;
     border: none;
     color: black;
-    font-family: 'Arial', sans-serif;
-    font-size: 1em;
+    font-size: 10em;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
@@ -64,6 +63,7 @@ body, html {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    font-family: 'Dancing Script', cursive;
     cursor: pointer;
     color: #fff;
     user-select: none;
@@ -92,11 +92,15 @@ body, html {
     padding: 20px;
     border-radius: 8px;
     width: 250px; /* Adjust width as needed */
+    height: 350px; /* Fixed height, adjust as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000; /* Ensures the box is on top of other elements */
+    overflow-y: auto; /* Adds a vertical scrollbar when content overflows */
 }
 
 .story-text {
     margin: 0;
-    font-family: 'Dancing Script', cursive; /* Use one of your imported fonts */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5; /* Adjust line height for better readability */
 }
+
