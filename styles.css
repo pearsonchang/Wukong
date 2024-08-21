@@ -117,6 +117,18 @@ body, html {
 
 
 @media (max-width: 768px) {
+    .button-container {
+        position: fixed;
+        bottom: 10px; /* 确保图标容器固定在屏幕底部 */
+        left: 50%; /* 居中对齐 */
+        transform: translateX(-50%); /* 水平居中对齐 */
+        flex-direction: column; /* 水平排列图标 */
+        justify-content: center; /* 居中对齐图标 */
+        width: auto; /* 自动宽度 */
+        gap: 15px; /* 增加按钮之间的间距 */
+        z-index: 1000; /* 确保按钮容器在其他内容之上 */
+    }
+
     .custom-button {
         background-color: transparent; /* 使按钮背景透明 */
         width: 60px; /* 固定按钮宽度 */
