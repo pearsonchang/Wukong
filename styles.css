@@ -18,8 +18,8 @@ body, html {
     top: 50%;
     transform: translateY(-50%); /* 垂直居中 */
     display: flex;
-    flex-direction: column;
-    gap: 10px; /* 按钮之间的间距 */
+    flex-direction: row;
+    gap: 30px; /* 按钮之间的间距 */
     margin-top: -120px; /* 负值会将按钮向上移动 */
 }
 
@@ -27,7 +27,7 @@ body, html {
     /* padding: 10px 20px; */
     background-color: black;
     border: none;
-    color: black;
+    background-color: transparent; /* 使按钮背景透明 */
     font-size: 10em;
     cursor: pointer;
     border-radius: 5px;
@@ -39,7 +39,18 @@ body, html {
 }
 
 .button-icon {
-    width: 40px; /* 根据需要调整图标大小 */
+    width: 80px; /* 根据需要调整图标大小 */
+    height: auto;
+}
+
+.icon-button {
+    background-color: transparent; /* 使按钮背景透明 */
+    border: none; /* 去掉按钮边框 */
+    padding: 0; /* 去掉内边距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* 根据需要调整图标大小 */
     height: auto;
 }
 
@@ -109,15 +120,17 @@ body, html {
     .button-container {
         position: fixed;
         bottom: 10px;
-        left: 50%;
+        left:10%;
+        top: 10%; /* 将图标容器向页面底部移动 */
         transform: translateX(-50%);
-        flex-direction: row;
+        flex-direction: column; /* 垂直排列图标 */
         justify-content: center;
         width: auto; /* 自动宽度，避免按钮变得过宽 */
         gap: 10px; /* 按钮之间的间距 */
     }
 
     .custom-button {
+        background-color: transparent; /* 使按钮背景透明 */
         font-size: 1.5em; /* 按钮字体大小 */
         width: 60px; /* 固定按钮宽度 */
         height: 60px; /* 固定按钮高度 */
@@ -126,6 +139,20 @@ body, html {
         align-items: center;
         justify-content: center;
     }
+
+    .icon-button {
+        background-color: transparent; /* 使按钮背景透明 */
+        border: none; /* 去掉按钮边框 */
+        padding: 0; /* 去掉内边距 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px; /* 固定按钮宽度 */
+        height: 60px; /* 固定按钮高度 */
+        border-radius: 10px; /* 圆角按钮 */
+        cursor: pointer; /* 鼠标悬停时显示为手型 */
+    }
+    
 
     .button-icon {
         width: 100%; /* 让图标填满按钮 */
