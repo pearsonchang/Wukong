@@ -119,21 +119,21 @@ body, html {
 @media (max-width: 768px) {
     .button-container {
         position: fixed;
-        bottom: 10px;
-        left: 10%;
-        top: 10%; /* 将图标容器向页面底部移动 */
-        transform: translateX(-50%);
-        flex-direction: column; /* 垂直排列图标 */
-        justify-content: center;
-        width: auto; /* 自动宽度，避免按钮变得过宽 */
-        gap: 10px; /* 按钮之间的间距 */
+        bottom: 10px; /* 确保图标容器固定在屏幕底部 */
+        left: 20%; /* 居中对齐 */
+        transform: translateX(-50%); /* 水平居中对齐 */
+        flex-direction: row; /* 水平排列图标 */
+        justify-content: center; /* 居中对齐图标 */
+        width: auto; /* 自动宽度 */
+        gap: 15px; /* 增加按钮之间的间距 */
+        z-index: 1000; /* 确保按钮容器在其他内容之上 */
     }
 
     .custom-button {
         background-color: transparent; /* 使按钮背景透明 */
         width: 60px; /* 固定按钮宽度 */
         height: 60px; /* 固定按钮高度 */
-        border-radius: 10px;
+        border-radius: 10px; /* 圆角按钮 */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -150,13 +150,13 @@ body, html {
         height: 60px; /* 固定按钮高度 */
         border-radius: 10px; /* 圆角按钮 */
         cursor: pointer; /* 鼠标悬停时显示为手型 */
+        z-index: 1000; /* 确保按钮在其他内容之上 */
     }
 
     .button-icon {
-        width: 80%; /* 增加图标宽度，以填满按钮 */
-        height: auto; /* 保持图标的宽高比 */
-        max-height: 80%; /* 限制图标的最大高度为按钮的 80% */
-        object-fit: contain; /* 确保图标在按钮内适当缩放 */
+        width: 50px; /* 固定图标宽度 */
+        height: 50px; /* 固定图标高度 */
+        object-fit: contain; /* 确保图标适当缩放 */
     }
 
     .storybox {
