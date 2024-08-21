@@ -120,16 +120,17 @@ body, html {
     .button-container {
         position: fixed;
         bottom: 10px; /* 确保图标容器固定在屏幕底部 */
-        left: 20%; /*居中对齐 */
+        left: 50%; /* 设置为视口宽度的 50% */
         transform: translateX(-50%); /* 水平居中对齐 */
-        flex-direction: column; /* 排列图标 */
+        flex-direction: column; /* 垂直排列图标 */
         justify-content: center; /* 居中对齐图标 */
+        align-items: center; /* 水平居中对齐 */
         width: auto; /* 自动宽度 */
         gap: 15px; /* 增加按钮之间的间距 */
         z-index: 1000; /* 确保按钮容器在其他内容之上 */
     }
 
-    .custom-button {
+    .custom-button, .icon-button {
         background-color: transparent; /* 使按钮背景透明 */
         width: 60px; /* 固定按钮宽度 */
         height: 60px; /* 固定按钮高度 */
@@ -137,20 +138,9 @@ body, html {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .icon-button {
-        background-color: transparent; /* 使按钮背景透明 */
         border: none; /* 去掉按钮边框 */
         padding: 0; /* 去掉内边距 */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px; /* 固定按钮宽度 */
-        height: 60px; /* 固定按钮高度 */
-        border-radius: 10px; /* 圆角按钮 */
         cursor: pointer; /* 鼠标悬停时显示为手型 */
-        z-index: 1000; /* 确保按钮在其他内容之上 */
     }
 
     .button-icon {
@@ -167,3 +157,4 @@ body, html {
         bottom: 10px; /* 调整底部位置 */
     }
 }
+
